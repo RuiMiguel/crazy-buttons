@@ -37,11 +37,10 @@ class SplashState extends State<SplashPage>
     animation = Tween<double>(begin: 0, end: 2*pi).animate(controller)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          controller.reverse();
-        } else if (status == AnimationStatus.dismissed) {
+          controller.reset();
           controller.forward();
         }
-      })
+      });
     controller.forward();
   }
 
