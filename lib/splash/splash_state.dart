@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:crazy_buttons/home/home_page.dart';
 import 'package:crazy_buttons/splash/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +11,8 @@ class AnimatedLogo extends AnimatedWidget {
   Widget build(BuildContext context) {
     final animation = listenable as Animation<double>;
     return Center(
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
-        height: animation.value,
-        width: animation.value,
+      child: new Transform.rotate(
+        angle: animation.value,
         child: new Image(image: new AssetImage("assets/images/logo.png")),
       ),
     );
@@ -33,9 +33,8 @@ class SplashState extends State<SplashPage>
 
   void animateSplash() {
     controller =
-        AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    animation = Tween<double>(begin: 0, end: 160).animate(controller)
-      // #enddocregion print-state
+        AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
+    animation = Tween<double>(begin: 0, end: 2*pi).animate(controller)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           controller.reverse();
@@ -43,8 +42,6 @@ class SplashState extends State<SplashPage>
           controller.forward();
         }
       })
-      // #docregion print-state
-      ..addStatusListener((state) => print('$state'));
     controller.forward();
   }
 
