@@ -11,7 +11,7 @@ class SplashState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 5), () {
       setState(() {
         _logoStyle = FlutterLogoStyle.horizontal;
-        Navigator.push(
+        Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => HomePage(title: 'Crazy buttons by GigiEconoSounds')),
         );
