@@ -79,7 +79,7 @@ class SplashState extends State<SplashPage>
               left: 0.0,
               right: 0.0,
               child: Center(
-                  child: Text("GigiEconoSounds",
+                  child: Text("EconoSounds",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.lightBlue,
@@ -87,15 +87,15 @@ class SplashState extends State<SplashPage>
                         fontWeight: FontWeight.bold,
                       )))),
           Positioned(
-              top: 80.0,
+              bottom: 80.0,
               left: 0.0,
               right: 0.0,
               child: Center(
-                  child: Text("GigiEconoSounds",
+                  child: Text("by Gigigo",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.lightBlue,
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.bold,
                       )))),
           AnimatedLogo(animation: animation)

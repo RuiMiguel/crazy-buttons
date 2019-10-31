@@ -42,7 +42,7 @@ class HomeState extends State<HomePage> {
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               title: Text(
-                "SliverGrid Widget",
+                "EconoSounds by Gigigo",
                 style: TextStyle(
                     color: Colors.black87,
                     fontSize: 20.0,
