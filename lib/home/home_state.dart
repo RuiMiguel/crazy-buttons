@@ -32,8 +32,6 @@ class HomeState extends State<HomePage> {
         slivers: <Widget>[
           ///First sliver is the App Bar
           SliverAppBar(
-            ///Properties of app bar
-            backgroundColor: Colors.white,
             floating: false,
             pinned: true,
             expandedHeight: 200.0,
@@ -44,25 +42,18 @@ class HomeState extends State<HomePage> {
               title: Text(
                 "EconoSounds by Gigigo",
                 style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold),
+                    color: Colors.white,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.normal),
               ),
-              background: Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: Colors.black26,
-                      width: 1.0,
-                    ),
-                  ),
-                ),
-              ),
+              background: new Image(
+                  image: new AssetImage("assets/images/morgado_tumbado.jpg"),
+                  fit: BoxFit.fill),
             ),
           ),
           SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
+              crossAxisCount: 3,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
@@ -85,8 +76,8 @@ class HomeState extends State<HomePage> {
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Colors.white,
-                fontSize: 10.0,
-                fontWeight: FontWeight.bold),
+                fontSize: 15.0,
+                fontWeight: FontWeight.normal),
           ),
         ),
       );

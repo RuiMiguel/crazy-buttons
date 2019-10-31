@@ -58,9 +58,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Cookie
+    - family: MamaBear
       fonts:
-        - asset: fonts/Cookie_Crumble_DEMO.otf
+        - asset: fonts/Mama Bear Incease.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

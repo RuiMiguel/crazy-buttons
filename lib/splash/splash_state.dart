@@ -13,7 +13,7 @@ class AnimatedLogo extends AnimatedWidget {
         margin: EdgeInsets.symmetric(vertical: 10),
         height: animation.value,
         width: animation.value,
-        child: FlutterLogo(),
+        child: new Image(image: new AssetImage("assets/images/logo.png")),
       ),
     );
   }
@@ -34,7 +34,7 @@ class SplashState extends State<SplashPage>
   void animateSplash() {
     controller =
         AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    animation = Tween<double>(begin: 0, end: 300).animate(controller)
+    animation = Tween<double>(begin: 0, end: 160).animate(controller)
       // #enddocregion print-state
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -76,8 +76,8 @@ class SplashState extends State<SplashPage>
           ),
           Positioned(
               top: 80.0,
-              left: 0.0,
-              right: 0.0,
+              left: 10.0,
+              right: 10.0,
               child: Center(
                   child: Text("EconoSounds",
                       textAlign: TextAlign.center,
