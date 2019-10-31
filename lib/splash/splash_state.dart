@@ -35,7 +35,7 @@ class SplashState extends State<SplashPage>
     controller =
         AnimationController(duration: const Duration(seconds: 2), vsync: this);
     animation = Tween<double>(begin: 0, end: 300).animate(controller)
-    // #enddocregion print-state
+      // #enddocregion print-state
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           controller.reverse();
@@ -43,17 +43,17 @@ class SplashState extends State<SplashPage>
           controller.forward();
         }
       })
-    // #docregion print-state
+      // #docregion print-state
       ..addStatusListener((state) => print('$state'));
     controller.forward();
   }
 
   void splashTimer() {
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 7), () {
       setState(() {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage(title: 'Crazy buttons by GigiEconoSounds')),
+          MaterialPageRoute(builder: (context) => HomePage()),
         );
       });
     });
@@ -68,11 +68,37 @@ class SplashState extends State<SplashPage>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      backgroundColor: Colors.black,
+      body: new Stack(
         children: <Widget>[
-          AnimatedLogo(animation: animation),
-          new Image(image: new AssetImage("assets/inda.gif"))
+          Center(
+            child: new Image(image: new AssetImage("assets/images/inda.gif")),
+          ),
+          Positioned(
+              top: 80.0,
+              left: 0.0,
+              right: 0.0,
+              child: Center(
+                  child: Text("GigiEconoSounds",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.lightBlue,
+                        fontSize: 40.0,
+                        fontWeight: FontWeight.bold,
+                      )))),
+          Positioned(
+              top: 80.0,
+              left: 0.0,
+              right: 0.0,
+              child: Center(
+                  child: Text("GigiEconoSounds",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.lightBlue,
+                        fontSize: 40.0,
+                        fontWeight: FontWeight.bold,
+                      )))),
+          AnimatedLogo(animation: animation)
         ],
       ),
     );

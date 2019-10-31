@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'GigiEconoSounds',
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
+        fontFamily: 'Cookie'
       ),
       home: SplashPage(),
     );
