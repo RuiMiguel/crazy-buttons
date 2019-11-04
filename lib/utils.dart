@@ -14,7 +14,7 @@ class Utils {
           .withOpacity(1.0);
 
   static Future<String> loadJsonFromFile(String file) async {
-    return await rootBundle.loadString(file);
+    return rootBundle.loadString(file);
   }
 
   static wait(int seconds, [FutureOr<Null> callback()]) {
