@@ -1,30 +1,13 @@
+import 'dart:convert';
 import 'dart:core';
 
 import 'package:crazy_buttons/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 import '../utils.dart';
-
-class MediaItem {
-  String name;
-  Uri media;
-  Uri image;
-}
+import 'media_model.dart';
 
 class HomeState extends State<HomePage> {
-  /*List<MediaItem> _items;
-
-  void List<MediaItem> loadItems() {
-
-  }
-  */
-
-  @override
-  void initState() {
-    super.initState();
-    //_items = loadItems();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,30 +38,51 @@ class HomeState extends State<HomePage> {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
             ),
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return itemView(index);
-              },
-              childCount: 20,
-            ),
+            delegate:
+                SliverChildBuilderDelegate((BuildContext context, int index) {
+              return mediaItemView(index);
+            }),
           ),
         ],
       ),
     );
   }
 
-  Widget itemView(int index) => Container(
-        height: 100.0,
-        color: Utils.getRandomColor(),
-        child: Center(
-          child: Text(
-            "ss",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 15.0,
-                fontWeight: FontWeight.normal),
-          ),
-        ),
-      );
+  Widget mediaItemView(int index) => FutureBuilder(
+      future: Utils.loadJsonFromFile("assets/data.json"),
+      builder: (context, snapshot) {
+        var mediaItems = json.decode(snapshot.data.toString());
+
+        return ListView.builder(
+          itemCount: mediaItems == null ? 0 : mediaItems.length,
+          itemBuilder: (context, index) {
+            var mediaItem = MediaItem.fromJson(mediaItems[index]);
+
+            if (snapshot.hasData) {
+              return GestureDetector(
+                  onTap: () {
+                    Utils.playMedia(mediaItem.media);
+                  },
+                  child: Container(
+                    height: 100.0,
+                    color: Utils.getRandomColor(),
+                    child: Center(
+                      child: Text(
+                        "${mediaItem.name}",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.normal),
+                      ),
+                    ),
+                  ));
+            } else if (snapshot.hasError) {
+              return new Text("${snapshot.error}",
+                  style: TextStyle(color: Colors.red));
+            }
+            return new CircularProgressIndicator();
+          },
+        );
+      });
 }

@@ -4,6 +4,8 @@ import 'package:crazy_buttons/home/home_page.dart';
 import 'package:crazy_buttons/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
+import '../utils.dart';
+
 class AnimatedLogo extends AnimatedWidget {
   AnimatedLogo({Key key, Animation<double> animation})
       : super(key: key, listenable: animation);
@@ -32,9 +34,9 @@ class SplashState extends State<SplashPage>
   }
 
   void animateSplash() {
-    controller =
-        AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
-    animation = Tween<double>(begin: 0, end: 2*pi).animate(controller)
+    controller = AnimationController(
+        duration: const Duration(milliseconds: 1000), vsync: this);
+    animation = Tween<double>(begin: 0, end: 2 * pi).animate(controller)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           controller.reset();
@@ -45,7 +47,7 @@ class SplashState extends State<SplashPage>
   }
 
   void splashTimer() {
-    Future.delayed(const Duration(seconds: 7), () {
+    Utils.wait(5, () {
       setState(() {
         Navigator.pushReplacement(
           context,

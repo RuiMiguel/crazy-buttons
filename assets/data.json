@@ -1,58 +1,50 @@
-{
-  "items": [
-    {
-      "name": "A pagar",
-      "media": "assets://audios/a_pagar.aac",
-      "image": "",
-      "category": "AlfredoDuro"
-    },
-    {
-      "name": "Al carrer",
-      "media": "assets://audios/al_carrer.aac",
-      "image": "",
-      "category": "AlfredoDuro"
-    },
-    {
-      "name": "A pagar",
-      "media": "assets://audios/a_pagar.aac",
-      "image": "",
-      "category": "AlfredoDuro"
-    },
-    {
-      "name": "Aquí to quisqui a pagar",
-      "media": "assets://audios/aqui_to_quisqui_a_pagar.aac",
-      "image": "",
-      "category": "AlfredoDuro"
-    },
-    {
-      "name": "Que ej jalowin",
-      "media": "assets://audios/que_ej_jalowin.aac",
-      "image": "",
-      "category": "AlfredoDuro"
-    },
-    {
-      "name": "Lo quieres en una palabra o en dos",
-      "media": "assets://audios/en_una_palabra_o_en_dos.aac",
-      "image": "",
-      "category": "Chicote"
-    },
-    {
-      "name": "Lo he puesto yo",
-      "media": "assets://audios/lo_he_puesto_yo.aac",
-      "image": "",
-      "category": "Chicote"
-    },
-    {
-      "name": "Te voy a denunciar",
-      "media": "assets://audios/te_voy_a_denunciar.aac",
-      "image": "",
-      "category": "EduardoInda"
-    },
-    {
-      "name": "Ma echo un eguince",
-      "media": "assets://audios/ma_echo_un_eguince.aac",
-      "image": "",
-      "category": "Variado"
-    }
-  ]
-}
+[
+  {
+    "name": "A pagar",
+    "media": "audios/a_pagar.aac",
+    "image": "",
+    "category": "AlfredoDuro"
+  },
+  {
+    "name": "Al carrer",
+    "media": "audios/al_carrer.aac",
+    "image": "",
+    "category": "AlfredoDuro"
+  },
+  {
+    "name": "Aquí to quisqui a pagar",
+    "media": "audios/aqui_to_quisqui_a_pagar.aac",
+    "image": "",
+    "category": "AlfredoDuro"
+  },
+  {
+    "name": "Que ej jalowin",
+    "media": "audios/que_ej_jalowin.aac",
+    "image": "",
+    "category": "AlfredoDuro"
+  },
+  {
+    "name": "Lo quieres en una palabra o en dos",
+    "media": "audios/en_una_palabra_o_en_dos.aac",
+    "image": "",
+    "category": "Chicote"
+  },
+  {
+    "name": "Lo he puesto yo",
+    "media": "audios/lo_he_puesto_yo.aac",
+    "image": "",
+    "category": "Chicote"
+  },
+  {
+    "name": "Te voy a denunciar",
+    "media": "audios/te_voy_a_denunciar.aac",
+    "image": "",
+    "category": "EduardoInda"
+  },
+  {
+    "name": "Ma echo un eguince",
+    "media": "audios/ma_echo_un_eguince.aac",
+    "image": "",
+    "category": "Variado"
+  }
+]
