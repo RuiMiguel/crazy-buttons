@@ -107,8 +107,8 @@ class HomeState extends State<HomePage> {
           ),
           delegate:
               SliverChildBuilderDelegate((BuildContext context, int index) {
-                var mediaItem = MediaItem.fromJson(mediaItems[index]);
-                return mediaItemView(mediaItem);
+            var mediaItem = MediaItem.fromJson(mediaItems[index]);
+            return mediaItemView(mediaItem);
           }, childCount: mediaItems.length));
     } else if (snapshot.hasError) {
       return printError();
@@ -117,7 +117,12 @@ class HomeState extends State<HomePage> {
 
   Widget mediaItemView(MediaItem mediaItem) => GestureDetector(
       onTap: () {
-        Utils.playMedia(mediaItem.media);
+        if(mediaItem.media != null && mediaItem.media.isNotEmpty) {
+          Utils.playMedia(mediaItem.media);
+        }
+        else {
+
+        }
       },
       child: Container(
         height: 150.0,

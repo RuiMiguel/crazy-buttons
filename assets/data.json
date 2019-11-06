@@ -36,10 +36,22 @@
     "category": "Chicote"
   },
   {
+    "name": "Pim pam trucu trucu",
+    "media": "audios/pim_pam_trucu_trucu.aac",
+    "image": "",
+    "category": "Chicote"
+  },
+  {
     "name": "Te voy a denunciar",
     "media": "audios/te_voy_a_denunciar.aac",
     "image": "",
     "category": "EduardoInda"
+  },
+  {
+    "name": "Viva el vino",
+    "media": "audios/viva_el_vino.aac",
+    "image": "",
+    "category": "MarianoRajoy"
   },
   {
     "name": "Ma echo un eguince",
