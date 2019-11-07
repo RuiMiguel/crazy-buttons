@@ -4,10 +4,9 @@ import 'dart:math' as math;
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:audioplayers/audioplayers.dart';
 
 class Utils {
-  static final AudioPlayer audioPlayer = new AudioPlayer();
+  static final AudioCache audioPlayer = new AudioCache();
 
   static getRandomColor() =>
       Color((math.Random().nextDouble() * 0xFFFFFF).toInt() << 0)
@@ -23,16 +22,8 @@ class Utils {
 
   static Future playMedia(String media) async {
     print("play media $media");
-    await AudioCache().play(media);
 
-    /*
-    if(audioPlayer.state == AudioPlayerState.PLAYING) {
-      audioPlayer.stop();
-    }
-    else {
-      audioPlayer.setVolume(1.0);
-      await audioPlayer.play(media, isLocal: true);
-    }
-     */
+    audioPlayer.clearCache();
+    audioPlayer.play(media);
   }
 }

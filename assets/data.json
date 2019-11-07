@@ -48,6 +48,24 @@
     "category": "EduardoInda"
   },
   {
+    "name": "Eres un ejemplo a seguir",
+    "media": "audios/eres_un_ejemplo_a_seguir.aac",
+    "image": "",
+    "category": "AlbertoGarrido"
+  },
+  {
+    "name": "HUB",
+    "media": "audios/hub.aac",
+    "image": "",
+    "category": "Gigigo"
+  },
+  {
+    "name": "Retrasat",
+    "media": "audios/retrasat.aac",
+    "image": "",
+    "category": "SergioLopez"
+  },
+  {
     "name": "Viva el vino",
     "media": "audios/viva_el_vino.aac",
     "image": "",
