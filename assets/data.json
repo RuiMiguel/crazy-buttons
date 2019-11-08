@@ -1,79 +1,79 @@
 [
   {
     "name": "A pagar",
-    "media": "audios/a_pagar.aac",
+    "media": "a_pagar.aac",
     "image": "",
     "category": "AlfredoDuro"
   },
   {
     "name": "Al carrer",
-    "media": "audios/al_carrer.aac",
+    "media": "al_carrer.aac",
     "image": "",
     "category": "AlfredoDuro"
   },
   {
     "name": "Aquí to quisqui a pagar",
-    "media": "audios/aqui_to_quisqui_a_pagar.aac",
+    "media": "aqui_to_quisqui_a_pagar.aac",
     "image": "",
     "category": "AlfredoDuro"
   },
   {
     "name": "Que ej jalowin",
-    "media": "audios/que_ej_jalowin.aac",
+    "media": "que_ej_jalowin.aac",
     "image": "",
     "category": "AlfredoDuro"
   },
   {
     "name": "Lo quieres en una palabra o en dos",
-    "media": "audios/en_una_palabra_o_en_dos.aac",
+    "media": "en_una_palabra_o_en_dos.aac",
     "image": "",
     "category": "Chicote"
   },
   {
     "name": "Lo he puesto yo",
-    "media": "audios/lo_he_puesto_yo.aac",
+    "media": "lo_he_puesto_yo.aac",
     "image": "",
     "category": "Chicote"
   },
   {
     "name": "Pim pam trucu trucu",
-    "media": "audios/pim_pam_trucu_trucu.aac",
+    "media": "pim_pam_trucu_trucu.aac",
     "image": "",
     "category": "Chicote"
   },
   {
     "name": "Te voy a denunciar",
-    "media": "audios/te_voy_a_denunciar.aac",
+    "media": "te_voy_a_denunciar.aac",
     "image": "",
     "category": "EduardoInda"
   },
   {
     "name": "Eres un ejemplo a seguir",
-    "media": "audios/eres_un_ejemplo_a_seguir.aac",
+    "media": "eres_un_ejemplo_a_seguir.aac",
     "image": "",
     "category": "AlbertoGarrido"
   },
   {
     "name": "HUB",
-    "media": "audios/hub.aac",
+    "media": "hub.aac",
     "image": "",
     "category": "Gigigo"
   },
   {
     "name": "Retrasat",
-    "media": "audios/retrasat.aac",
+    "media": "retrasat.aac",
     "image": "",
     "category": "SergioLopez"
   },
   {
     "name": "Viva el vino",
-    "media": "audios/viva_el_vino.aac",
+    "media": "viva_el_vino.aac",
     "image": "",
     "category": "MarianoRajoy"
   },
   {
     "name": "Ma echo un eguince",
-    "media": "audios/ma_echo_un_eguince.aac",
+    "media": "ma_echo_un_eguince.aac",
     "image": "",
     "category": "Variado"
   }

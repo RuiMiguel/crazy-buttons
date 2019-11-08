@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:math' as math;
 
-import 'package:audioplayers/audio_cache.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Utils {
-  static final AudioCache audioPlayer = new AudioCache();
+  static final AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
 
   static getRandomColor() =>
       Color((math.Random().nextDouble() * 0xFFFFFF).toInt() << 0)
@@ -23,7 +23,11 @@ class Utils {
   static Future playMedia(String media) async {
     print("play media $media");
 
-    audioPlayer.clearCache();
-    audioPlayer.play(media);
+    assetsAudioPlayer.stop();
+    assetsAudioPlayer.open(AssetsAudio(
+      asset: media,
+      folder: "assets/audios/",
+    ));
+    assetsAudioPlayer.play();
   }
 }
