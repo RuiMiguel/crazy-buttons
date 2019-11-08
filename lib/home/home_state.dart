@@ -120,9 +120,6 @@ class HomeState extends State<HomePage> {
         if(mediaItem.media != null && mediaItem.media.isNotEmpty) {
           Utils.playMedia(mediaItem.media);
         }
-        else {
-
-        }
       },
       child: Container(
         height: 150.0,

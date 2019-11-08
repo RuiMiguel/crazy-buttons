@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Utils {
+  static final String AUDIOS_BASE_PATH = "assets/audios/";
   static final AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
 
   static getRandomColor() =>
@@ -26,7 +27,7 @@ class Utils {
     assetsAudioPlayer.stop();
     assetsAudioPlayer.open(AssetsAudio(
       asset: media,
-      folder: "assets/audios/",
+      folder: AUDIOS_BASE_PATH,
     ));
     assetsAudioPlayer.play();
   }
